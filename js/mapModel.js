@@ -1,6 +1,6 @@
 var models = {
     "flower": {
-        id: "#joker",
+        id: "#flower",
         position: "0 0 -10"
     },
     "mickey": {
