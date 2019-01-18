@@ -1,0 +1,59 @@
+<html>
+  <head>
+        <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      />
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="./vendor/ar.js/aframe/build/aframe-ar.js"></script>
+    <script>
+      ARjs.Context.baseURL = "vendor/ar.js/three.js/";
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .menu {
+            position: fixed;
+            bottom: 0px;
+            z-index: 2;
+            width: 90%;
+            margin-left: 80px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false">
+      <a-assets>
+        <img
+          id="flower"
+          src="./images/flower.png"
+          
+        />
+        <img
+          id="mickey"
+          src="./images/mickey.png"
+          
+        />
+      </a-assets>
+      <a-entity
+        camera
+        id="cursor-container"
+        position="0 0 0"
+      ></a-entity>
+      <a-image id="target" width="5"
+      height="5"></a-image>
+    </a-scene>
+    <div class="btn-group btn-group-justified menu" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default" onclick="showModel('flower')">Flower</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default" onclick="showModel('mickey')">Mickey</button>
+            </div>
+            </div>
+          </div>
+    <script src="./js/mapModel.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
